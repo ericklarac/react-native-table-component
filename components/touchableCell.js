@@ -9,11 +9,9 @@ class TouchableCell extends Component {
   }
 
   render() {
-    console.log(this.props);
-
-    const {data, listener, width, height, flex, style, textStyle} = this.props;
+    const {data, listener, i, width, height, flex, style, textStyle} = this.props;
     const textDom = React.isValidElement(data) ? data : (
-        <TouchableOpacity onPress={listener}>
+        <TouchableOpacity onPress={() => listener(i)}>
             <Text style={[textStyle, styles.text]}>{data}</Text>
         </TouchableOpacity>
       );

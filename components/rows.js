@@ -50,18 +50,12 @@ class TouchableRow extends Component {
         widthArr: PropTypes.array,
         flexArr: PropTypes.array,
         data: PropTypes.array,
-
-        listeners: PropTypes.array,
-
         style: ViewPropTypes.style,
         textStyle: Text.propTypes.style,
     }
 
   render() {
-    const {data, style, widthArr, height, flexArr, textStyle, borderStyle, listeners} = this.props;
-
-    console.log("Prooooooops -> ");
-    console.log(this.props);
+    const {data, style, widthArr, height, flexArr, textStyle, borderStyle, listener} = this.props;
 
     let widthNum = 0;
     if (widthArr) {
@@ -83,7 +77,7 @@ class TouchableRow extends Component {
           data.map((item, i) => {
             const flex = flexArr && flexArr[i];
             const width = widthArr && widthArr[i];
-            return <TouchableCell key={i} data={item} listener={listeners[i]} width={width} height={height} flex={flex} textStyle={textStyle} borderStyle={borderStyle}/>
+            return <TouchableCell key={i} data={item} listener={listener} i={i} width={width} height={height} flex={flex} textStyle={textStyle} borderStyle={borderStyle}/>
           })
         }
       </View>
