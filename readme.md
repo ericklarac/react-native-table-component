@@ -14,6 +14,9 @@ This is a table component for react native.
 
 ## Installation
 > npm install react-native-table-component-elara
+>
+> `Examples will be tested and added soon.`
+
 
   `USE:`
   ```jsx
