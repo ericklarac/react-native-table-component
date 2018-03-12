@@ -1,4 +1,4 @@
-# React Native Table Component
+# React Native Table Component by Elara
 [![npm version](https://badge.fury.io/js/react-native-table-component.svg)](https://badge.fury.io/js/react-native-table-component) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) 
 
 This is a table component for react native.
