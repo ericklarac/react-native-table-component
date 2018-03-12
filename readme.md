@@ -10,8 +10,10 @@ This is a table component for react native.
 - [License](#license)
 <br/><br/>
 
+###### Original library react-native-table-component from Gil2015, modified to add events to the touch cells
+
 ## Installation
-> npm install react-native-table-component
+> npm install react-native-table-component-elara
 
   `USE:`
   ```jsx
@@ -34,7 +36,7 @@ This is a table component for react native.
 ```jsx
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, TouchableCell, TableWrapper, TouchableRow, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 class tableView extends Component {
   render() {

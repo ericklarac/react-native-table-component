@@ -1,25 +1,26 @@
 {
-  "name": "react-native-table-component",
-  "version": "1.1.2",
-  "description": "Build table for react native.",
+  "name": "react-native-table-component-elara",
+  "version": "1.1.11",
+  "description": "Build table for react native and add events to the head cells.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gil2015/react-native-table-component.git"
+    "url": "git+https://github.com/ericklarac/react-native-table-component.git"
   },
   "keywords": [
     "react-native",
     "table",
     "react-native-table",
-    "react-native-table-component"
+    "react-native-table-component",
+    "elara"
   ],
-  "author": "gil2015",
+  "author": "elara",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Gil2015/react-native-table-component/issues"
+    "url": "https://github.com/ericklarac/react-native-table-component/issues"
   },
-  "homepage": "https://github.com/Gil2015/react-native-table-component#readme"
+  "homepage": "https://github.com/ericklarac/react-native-table-component#readme"
 }

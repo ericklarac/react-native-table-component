@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, ViewPropTypes, Text, StyleSheet } from 'react-native';
 import Cell from './cell';
+import TouchableCell from './touchableCell';
 
 class Row extends Component {
   static propTypes = {
@@ -42,6 +43,55 @@ class Row extends Component {
     )
   }
 }
+
+
+class TouchableRow extends Component {
+    static propTypes = {
+        widthArr: PropTypes.array,
+        flexArr: PropTypes.array,
+        data: PropTypes.array,
+
+        listeners: PropTypes.array,
+
+        style: ViewPropTypes.style,
+        textStyle: Text.propTypes.style,
+    }
+
+  render() {
+    const {data, style, widthArr, height, flexArr, textStyle, borderStyle, listeners} = this.props;
+
+    console.log("Prooooooops -> ");
+    console.log(this.props);
+
+    let widthNum = 0;
+    if (widthArr) {
+      for(let i=0; i<widthArr.length; i++) {
+          widthNum += widthArr[i];
+      }
+    }
+
+
+    return (
+      data ?
+      <View style={[
+        height && {height: height},
+        widthNum && {width: widthNum},
+        styles.row,
+        style
+      ]}>
+        {
+          data.map((item, i) => {
+            const flex = flexArr && flexArr[i];
+            const width = widthArr && widthArr[i];
+            return <TouchableCell key={i} data={item} listener={listeners[i]} width={width} height={height} flex={flex} textStyle={textStyle} borderStyle={borderStyle}/>
+          })
+        }
+      </View>
+      : null
+    )
+  }
+}
+
 
 class Rows extends Component {
   static propTypes = {
@@ -91,4 +141,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export { Row, Rows };
+export { Row, Rows, TouchableRow };
