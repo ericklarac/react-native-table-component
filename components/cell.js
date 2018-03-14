@@ -11,7 +11,7 @@ class Cell extends Component {
   render() {
     const {data, width, height, flex, style, textStyle} = this.props;
     const textDom = React.isValidElement(data) ? data : (
-        <Text style={[textStyle, styles.text]}>{data}</Text>
+        <Text style={[textStyle, styles.text]}>{typeof data == "number" ? data.toLocaleString() : data}</Text>
       );
     let borderWidth,borderColor;
     if (this.props.borderStyle && this.props.borderStyle.borderWidth !== undefined) {
