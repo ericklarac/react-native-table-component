@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, ViewPropTypes, Text, StyleSheet } from 'react-native';
+import Numeral from 'numeral';
 
 const formatPattern2 = '0,0';
 const formatPattern = '0,0.00';
