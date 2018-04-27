@@ -1,7 +1,7 @@
 {
   "name": "react-native-table-component-elara",
-  "version": "1.1.15",
-  "description": "Build table for react native and add events to the head cells.",
+  "version": "1.1.16",
+  "description": "Build table for react native and add events to the head cells. Added Numeral format.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ericklarac/react-native-table-component/issues"
   },
-  "homepage": "https://github.com/ericklarac/react-native-table-component#readme"
+  "homepage": "https://github.com/ericklarac/react-native-table-component#readme",
+  "dependencies": {
+    "numeral": "^2.0.6"
+  }
 }
